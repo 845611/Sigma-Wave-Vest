@@ -1,0 +1,436 @@
+/* General Page Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header .logo img {
+    height: 70px;
+	filter: invert(1);
+}
+/* Ensure header spans full width */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between links & button */
+    align-items: center;
+    background-color: #222;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Full width */
+}
+
+/* Make nav links larger */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Aligns text with the button */
+}
+
+/* Increase font size of links */
+nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem; /* Increase size */
+    font-weight: 600; /* Make it bolder */
+    padding: 0.75rem 1rem; /* Add padding to match button */
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    height: 100%; /* Keep consistent height */
+}
+
+/* Ensure button height matches */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem; /* Adjust padding */
+    font-size: 1.2rem; /* Match text size */
+    font-weight: 700; /* Keep button bold */
+}
+
+
+
+nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav .nav-link:hover {
+    color: #00bcd4;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, #333, #444);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Features Section */
+#features {
+    padding: 10vh 2rem;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.section {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+}
+
+.section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+ 
+
+@keyframes a {
+    0% {
+        --k: 0;
+    }
+}
+
+/* Scroll-Driven Text Highlights */
+.highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.highlight::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #00bcd4;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.highlight.active::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Animated Scrolling Introduction */
+.faq h3 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.faq h3.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reviews Section (Sliding) */
+.reviews-slider {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: transform 1s ease-in-out;
+}
+
+.review {
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    background-color: #00bcd4;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #00bcd4;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00796b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+*{
+  box-sizing:border-box;
+}
+
+a{
+  color:#ccc;
+}
+.container{
+  width:500px;
+  min-height:315px;
+  margin:0 auto;
+  position:relative;
+  padding-bottom:30px;
+  overflow:hidden;
+}
+h1{
+  text-align:center;
+  text-shadow:0 1px white;
+  color:#02303F;
+}
+h2{
+  color:#736861; 
+  margin:15px 0 5px;
+  text-shadow:0 1px rgba(255,255,255,0.5);
+}
+h6{
+  color:#928566; 
+  margin:0;
+}
+input[type="radio"] {
+position: absolute;
+width: 1px; /* Setting this to 0 make it invisible for VoiceOver */
+height: 1px; /* Setting this to 0 make it invisible for VoiceOver */
+padding: 0;
+margin: -1px;
+border: 0;
+clip: rect(0 0 0 0);
+overflow: hidden;
+}
+label{
+  display:block;
+  width:32%;
+  border: 4px solid white;
+  position:absolute;
+  bottom:5px;
+  cursor: pointer;
+  transition: border-color 0.3s linear;
+}
+
+label.second{
+  left:34%;
+}
+label.third{
+  left:68%;
+}
+
+blockquote{
+  margin:0;
+  padding:30px;
+  width:500px;
+  background-color: #00CEFF;
+  color:white;
+  box-shadow: 0 5px 2px rgba(0,0,0,0.1);
+  position:relative;
+  transition: background-color 0.6s linear;
+		border-radius: 10px;
+}
+
+blockquote:after { 
+  content: " "; 
+  height: 0; 
+  width: 0; 
+  position: absolute; 
+  top: 100%; 
+  border: solid transparent; 
+  border-top-color: #00CEFF;
+  border-left-color:#00CEFF;
+  border-width: 10px; 
+  left: 10%; 
+		border-radius: 10px;
+} 
+#second:checked ~ .two blockquote {
+  background-color:purple;
+}
+.two blockquote:after{
+  border: solid transparent; 
+  border-top-color: purple;
+  border-left-color:purple;
+  border-width: 10px;
+		border-radius: 10px;
+}
+#third:checked ~ .three blockquote{
+  background-color:#54885F;
+}
+.three blockquote:after{
+  border: solid transparent; 
+  border-top-color: #54885F;
+  border-left-color: #54885F;
+  border-width: 10px;
+	border-radius: 10px;
+}
+.quotes{
+  position:absolute;
+  color:rgba(255,255,255,0.5);
+  font-size:5em;
+}
+.leftq{
+  top:-25px;
+  left:5px;
+}
+.rightq{
+  bottom:-10px;
+  right:5px;
+}
+img{
+  float:left;
+  margin-right: 20px;
+}
+.slide{
+  position:absolute;
+  left:-100%;
+  opacity:0;
+  transition: all 0.6s ease-in;
+}
+
+#first:checked ~ label.first {
+  border-width:6px;
+  border-color:#00CEFF;
+}
+#second:checked ~ label.second {
+  border-width:6px; border-color:purple;
+}
+#third:checked ~ label.third {
+  border:6px solid #54885F;
+}
+
+#first:checked ~ div.one {
+  left:0;
+  opacity:1;
+}
+#second:checked ~ div.two {
+  left:0;
+  opacity:1;
+}
+#third:checked ~ div.three {
+  left:0;
+  opacity:1;
+}
+
+
+.gallery {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 35s linear infinite;
+  left: 45%;
+  transform: translateX(-30%) perspective(1200px);
+}
+
+@keyframes rotate {
+  from {
+    transform: translateX(-30%) perspective(1200px) rotateY(0deg);
+  }
+  to {
+    transform: translateX(-30%) perspective(1200px) rotateY(360deg);
+  }
+}
+
+.gallery span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+}
+
+.gallery span img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+#gallery {
+  height: 70vh; /* Makes it take up the full screen height */
+  display: flex;
+  overflow:hidden; /* Prevents cut-off issues */
+	padding-top: 90px; /* Moves the gallery down */
+}
+
